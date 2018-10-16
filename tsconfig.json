@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "module": "none",
+      "target": "es2015",
+      "declaration": false,
+      "outFile": "script.js",
+      "sourceMap": true
+    },
+    "include": [
+      "src/**/*"
+    ],
+    "exclude": [ ]
+}

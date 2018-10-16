@@ -1,0 +1,483 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: rgb(14, 14, 15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#page-content > .content {
+    padding: 0 1.25rem;
+}
+
+h1 {
+    font-weight: 200;
+}
+
+.navbar {
+    background-color: #fff;
+    padding: 1.25em;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 2em;
+    border-bottom: solid 1px #dcdcdc;
+    box-shadow: #ddd 0px 0px 3px;
+    display: inline-block;
+    width: 100%;
+}
+
+.navbar > *:last-child {
+    float: right;
+}
+
+.navbar a,
+.navbar a:visited,
+.navbar a:hover,
+.navbar a:focus,
+.navbar a:active,
+.user-link,
+.user-link:visited,
+.user-link:hover,
+.user-link:focus,
+.user-link:active {
+    color: rgb(14, 14, 15);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown > *:last-child {
+    background-color: #fff;
+    border: solid #dcdcdc 1px;
+    width: auto;
+    display: none;
+    float: left;
+    top: 100%;
+    right: 0;
+    left: auto;
+    position: absolute;
+}
+
+.dropdown:hover > *:last-child {
+    display: block;
+}
+
+.dropdown > *:last-child > a {
+    display: block;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+.dropdown > *:last-child > a:hover {
+    background-color: #dcdcdc;
+}
+
+@media only screen and (min-width: 64em) {
+    #page-content {
+        margin: auto;
+        max-width: 61.5em;
+    }
+}
+
+@media only screen and (min-width: 75em) {
+    #page-content {
+        margin: auto;
+        max-width: 72.5em;
+    }
+}
+
+#page-content {
+    width: 100%;
+    margin-bottom: 2em;
+    flex-grow: 1;
+}
+
+#footer {
+    background-color: #fff;
+    border-top: solid 1px #dcdcdc;
+    box-shadow: #ddd 0px 0px 3px;
+    padding: 1.25em;
+}
+
+.post-card {
+    background-color: #fff;
+    border-radius: 0.25em;
+    margin-bottom: 1em;
+    border: solid 1px #dcdcdc;
+}
+
+.post-card > *:not(:last-child) {
+    border-bottom: solid 1px #dcdcdc;
+}
+
+.post-card-header {
+    padding: 1em;
+}
+
+.post-card-image {
+    width: 100%;
+    display: block;
+    background-size: cover;
+    background-position: center;
+}
+
+.post-card-image:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+#last-posts .post-card-image {
+    margin-bottom: 1em;
+}
+
+.post-card-info {
+    padding: 1em;
+}
+
+.post-card-info .date {
+    text-transform: uppercase;
+    color: rgb(197, 197, 211);
+    font-size: 0.75rem;
+}
+
+#userProfileContainer {
+    padding-bottom: 2em;
+    border-bottom: solid 1px #dcdcdc;
+    margin-bottom: 2em;
+}
+
+#userPostContainer {
+    background-color: #fff;
+    border: solid 1px #dcdcdc;
+}
+
+#userPostContainer .date {
+    margin-top: 1em;
+    text-transform: uppercase;
+    color: rgb(197, 197, 211);
+    font-size: 0.7rem;
+}
+
+@media only screen and (min-width: 64em) {
+    .post-image {
+        min-height: 500px;
+    }
+}
+@media only screen and (max-width: 64em) {
+    .post-image {
+        min-height: 100%;
+    }
+}
+
+.post-image {
+    background-color: #000;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.post-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.post-info {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.post-info > *:not(:first-child) {
+    padding-top: 1em;
+}
+
+.post-info > *:not(:last-child) {
+    padding-bottom: 1em;
+    border-bottom: solid 1px #dcdcdc;
+}
+
+.post-info .add-comment-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.post-info #comments {
+    flex-grow: 1;
+    overflow-y: auto;
+    min-height: 0;
+    flex-shrink: 0;
+    flex-basis: 0;
+    min-height: 100px;
+}
+
+.post-info .add-comment-container > input {
+    flex-grow: 1;
+    margin-right: 1em;
+    width: 100%;
+}
+
+@media only screen and (min-width: 48em) {
+    .post-info {
+        padding: 1em 1.5em 1em 0.5em;
+        min-height: 20em;
+    }
+}
+
+.button-group-vertical {
+    display: inline-block;
+}
+
+.button-group-vertical > button {
+    display: block;
+    width: 100%;
+    border-radius: 0;
+}
+
+.setting-parameter {
+    margin-bottom: 1em;
+}
+
+.separator {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-bottom: solid 1px #dcdcdc;
+}
+
+.mini-container {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+}
+
+.mini-container .form-element {
+    display: block;
+    width: 100%;
+}
+
+.form-element {
+    margin-bottom: 1em;
+}
+
+.button-group-vertical > button:first-child {
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+}
+
+.button-group-vertical > button:last-child {
+    border-bottom-left-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
+}
+
+.button-group-vertical > button:not(:last-child) {
+    border-bottom-width: 0;
+}
+
+input, textarea, select, button {
+    padding: 0.5em;
+    border-radius: 0.25em;
+    border: solid 1px #dcdcdc;
+}
+
+button {
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    color: rgb(116, 116, 129);
+    transition: background-color 0.1s;
+}
+
+button:hover {
+    background-color: rgb(226, 226, 226);
+}
+
+#like-button {
+    cursor: pointer;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) color 0.25s;
+    position: relative;
+}
+#like-button.checked {
+    color: red;
+}
+#like-button .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0, 0);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) transform 0.25s;
+}
+#like-button.checked .fa {
+    transform: translate(-50%, -50%) scale(1, 1);
+}
+
+#camera {
+    width: 100%;
+}
+
+#camera-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+#take-photo-button {
+    color: rgba(221, 221, 221, 0.816);
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#edit-canvas-container {
+    width: 100%;
+}
+#edit-canvas-container canvas {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+#edit-canvas-container .edition-container {
+    position: relative;
+    width: 100%;
+}
+
+.handles-container {
+    border: 1px solid #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.handles-container .handle {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border: 1px solid #000;
+    position: absolute;
+    cursor: pointer;
+}
+
+.handles-container #top-left-handle {
+    top: -5px;
+    left: -5px;
+}
+
+.handles-container #top-right-handle {
+    top: -5px;
+    right: -5px;
+}
+
+.handles-container #middle-handle {
+    top: calc(50% - 5px);
+    left: calc(50% - 5px);
+}
+
+.handles-container #bottom-left-handle {
+    bottom: -5px;
+    left: -5px;
+}
+
+.handles-container #bottom-right-handle {
+    bottom: -5px;
+    right: -5px;
+}
+
+#images-selection .image-selection {
+    cursor: pointer;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    box-shadow: #ababab 0px 0px 3px;
+    transition: box-shadow 0.2s;
+}
+
+#images-selection .image-selection:hover {
+    box-shadow: #77858d 0px 0px 7px;
+}
+
+#images-selection .image-selection img {
+    width: 100%;
+    display: block;
+}
+
+.remove-button-right {
+    cursor: pointer;
+    float: right;
+}
+
+#modal-container {
+    display: none;
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#modal-container.visible {
+    display: block;
+}
+
+.modal-content {
+    margin: 2em auto;
+    width: 20em;
+    background-color: #fff;
+    border-radius: 0.2em;
+    border: solid #555 1px;
+}
+
+.modal-body,
+.modal-footer {
+    padding: 1em;
+}
+.modal-footer {
+    text-align: right;
+}
+
+.modal-body:not(:last-child),
+.modal-footer:not(:last-child) {
+    border-bottom: solid #dcdcdc 1px;
+}
+
+.loading-bar {
+    background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(0, 0, 0, 0) 75%);
+    background-size: 2em 2em;
+    background-repeat: repeat-x;
+    background-color: rgb(174, 191, 239);
+    border-radius: 0.1em;
+    border: solid rgb(132, 145, 182) 1px;
+    animation: loading-bar 1s linear infinite;
+    transition: width 0.2s;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: inline-block;
+}
+
+@keyframes loading-bar {
+	0%{
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 2em 0;
+	}
+}
